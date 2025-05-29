@@ -1,6 +1,6 @@
 
 
-import { FaBell, FaRegBell, FaSearch } from 'react-icons/fa'
+import { FaRegBell } from 'react-icons/fa'
 import { IoIosArrowDropleft, IoIosSearch } from 'react-icons/io'
 
 export default function NavBar() {
