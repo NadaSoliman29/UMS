@@ -7,7 +7,7 @@ import { Menu, MenuItem, Sidebar } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { useContext, useState } from "react";
-import { AuthContext } from "../UserList/AuthContext";
+import { AuthContext } from "../context/AuthContext";
 
 export default function SideBar() {
   let {userData}:any=useContext(AuthContext)

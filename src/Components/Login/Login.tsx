@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { AuthContext } from '../UserList/AuthContext';
+import { AuthContext } from '../context/AuthContext';
 
 
 
@@ -44,7 +44,7 @@ export default function Login() {
    
    <div className='container-fluid login-container'>
     <div className="row justify-content-center align-items-center vh-100">
-      <div className="col-md-3 bg-white p-4 rounded-4">
+      <div className="col-md-3 bg-white p-4 rounded-4 loginmobile">
       <div className="title text-center">
         <h3 className='mb-4 userTitle headuser'>User Management System</h3>
         <h5>SIGN IN</h5>

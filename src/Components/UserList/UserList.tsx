@@ -79,7 +79,7 @@ navigate("/dashboard/Adduser")
     <div className=''>
   <div className='d-flex  justify-content-between mx-2 p-2  '>
     <h3>Users List</h3>
-    <button className='btn btn-warning text-white BtnSign' onClick={moveToAddUser}>ADD NEW User</button>
+    <button className='btn btn-warning text-white adduserbtn' onClick={moveToAddUser}>ADD NEW User</button>
   </div>
   </div>
   <hr />
@@ -90,10 +90,10 @@ navigate("/dashboard/Adduser")
          
           <th></th>
           <th>First Name</th>
-          <th>Last Name</th>
+          <th className="d-none d-md-table-cell">Last Name</th>
           <th>Email</th>
-          <th>Phone</th>
-          <th>Birth Date</th>
+          <th className="d-none d-md-table-cell">Phone</th>
+          <th className="d-none d-md-table-cell">Birth Date</th>
           <th>Actions</th>
 
 
@@ -107,10 +107,10 @@ navigate("/dashboard/Adduser")
          
           <td><img src={user?.image} className='w-25' alt='profile' /></td>
           <td>{user?.firstName}</td>
-          <td>{user?.lastName}</td>
+          <td className="d-none d-md-table-cell">{user?.lastName}</td>
           <td>{user?.email}</td>
-          <td>{user?.phone}</td>
-          <td>{user?.birthDate}</td>
+          <td className="d-none d-md-table-cell">{user?.phone}</td>
+          <td className="d-none d-md-table-cell">{user?.birthDate}</td>
           <td>
             <MdOutlineModeEdit className='text-warning mx-2 handelcaursoual' size={20} onClick={() => navigate(`/dashboard/update-user/${user.id}`)}/>
             <SlTrash className='text-danger mx-2  handelcaursoual' size={20} onClick={()=>handleShow(user)}  />

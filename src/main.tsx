@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import './index.css'
 import App from './App.tsx'
-import AuthContextProvider from './Components/UserList/AuthContext.tsx'
+import AuthContextProvider from './Components/context/AuthContext.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <AuthContextProvider>

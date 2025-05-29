@@ -152,3 +152,44 @@ table tr td, table tr th {
 .addform{
 width: 60%;
 }
+@media (max-width: 576px) {
+  .addform {
+    padding: 1rem !important;
+    width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  .updatebtn {
+    width: 100%
+  }
+}
+
+.adduserbtn{
+   
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffff;
+        width: 15%;
+}
+.adduserbtn:hover{
+   
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffffa1;
+}
+
+@media (max-width: 576px) {
+ .adduserbtn{
+      font-size: 14px;
+    font-weight: 500;
+    color: #ffff;
+    width: 35%;
+}
+}
+@media (max-width: 576px) {
+ .loginmobile{
+   
+    width: 85%;
+}
+
+}
