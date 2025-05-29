@@ -1,0 +1,154 @@
+.login-container{
+background: linear-gradient(to right, #FEAF00 ,#F8D442);
+}
+
+.BtnSign{
+   
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffff;
+        width: 15%;
+}
+.BtnSign:hover{
+   
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffffa1;
+}
+.txtsign{
+    color: #6C6C6C; 
+    font-size: 13px;
+    font-weight: 400;
+}
+.userTitle{
+    font-weight: 700;
+    font-size: 24px;
+    color: #000000;
+     position: relative;
+  padding-left: 15px;
+}
+
+.userTitle::before {
+  content: '';
+  position: absolute;
+   left: 18px;
+    top: 0;
+    width: 5px;
+  height: 100%;
+  background-color: #F8D442; 
+}
+input::placeholder {
+  color: #CDCDCD !important;
+  font-size: 12px !important;
+ font-weight: 400 !important;
+
+}
+.textlabel{
+   color: #6C6C6C;
+    font-weight: 500;
+    font-size: 14px;
+}
+.sideContainer{
+    background-color: #f2e9e0;
+     position: sticky;
+  top: 0;
+ 
+  z-index: 1000;
+}
+.sideContainer .ps-sidebar-container   .ps-menu-button:hover {
+    background-color: rgba(239, 155, 40, 0.3);
+}
+/* .logoutstyle{
+        position: fixed !important;
+    bottom: 14px;
+} */
+.admin{
+    color: #FEAF00;
+    font-size: 14px;
+}
+
+
+.UMS{
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+     position: relative;
+  padding-left: 15px;
+    padding-top: 13px;
+}
+
+.UMS::before {
+    content: "";
+position: absolute;
+    left: 4px;
+    top: 10px;
+    width: 5px;
+    height: 100%;
+    background-color: #F8D442;
+    height: 22px;
+}
+.css-1wvake5{
+    width: 200px !important;
+    min-width: 200px !important;
+}
+.css-1wvake5.ps-collapsed {
+    width: 80px !important;
+    min-width: 80px !important;
+}
+th {
+    color: #ACACAC !important;
+}
+.bguser{
+    background-color: #f8f8f8 !important;
+}
+
+.table {
+    --bs-table-bg:  #f8f8f8 !important;
+    width: 90%;
+      margin: 1rem;
+    text-align: center;
+}
+
+table tr {
+  border-radius: 10px;
+}
+
+table tr td, table tr th {
+  vertical-align: middle !important;
+}
+
+
+.search-box {
+  max-width: 300px;
+  position: relative;
+}
+
+.search-box input {
+  color: #E5E5E5;
+  height: 40px;
+  font-size: 14px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #E5E5E5;
+  pointer-events: none;
+}
+.bellicon{
+   color: #E5E5E5;
+}
+.tablestyle
+{
+  position: sticky;
+  top: 0;   
+  z-index: 100;
+}
+.handelcaursoual{
+ cursor: pointer;
+}
+.addform{
+width: 60%;
+}
