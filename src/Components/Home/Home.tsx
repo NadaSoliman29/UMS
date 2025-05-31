@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
-} from 'recharts';
+import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer} from 'recharts';
+
 
 export default function Home() {
+
   const navigate = useNavigate();
 
   const data = [

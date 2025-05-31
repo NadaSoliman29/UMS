@@ -8,17 +8,26 @@ import { Link } from "react-router-dom";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function SideBar() {
+
+const theme = useContext(ThemeContext);
+if (!theme) throw new Error("ThemeContext is not provided");
+const { isDark, toggleTheme } = theme;
+
+
+
+
   let {userData}:any=useContext(AuthContext)
-  let [collapsed, setCollapsed] = useState(false);
+ let [collapsed, setCollapsed] = useState(window.innerWidth < 667);
   let toggleCollapsed = () => {
     setCollapsed(!collapsed);
   };
   return ( 
     <div className="sideContainer vh-100">
       
-      <Sidebar collapsed={collapsed} className="vh-100" >
+      <Sidebar collapsed={collapsed}   className={`vh-100 ${isDark ? "sidebar-dark" : "sidebar-light"}`} >
     <div className="d-flex align-items-center p-2">
       <span onClick={toggleCollapsed} className="handelcaursoual">
         {collapsed ? (
@@ -63,7 +72,11 @@ export default function SideBar() {
           <MenuItem className="logoutstyle" icon={<MdOutlineLogout />} component={<Link to=" " />}>
             Logout
           </MenuItem>
+            <MenuItem onClick={toggleTheme} icon={<i className="fa-solid fa-moon"></i>}>
+                  {isDark ? "Light Mode" : "Dark Mode"}
+          </MenuItem>
         </Menu>
+      
       </Sidebar>
     </div>
   );

@@ -7,6 +7,8 @@ import { SlTrash } from 'react-icons/sl';
 import { Button, Modal } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 interface User {
   id:number;
@@ -20,6 +22,12 @@ interface User {
 
 export default function UserList() {
   
+// dark mode 
+const theme = useContext(ThemeContext);
+if (!theme) throw new Error("ThemeContext not provided");
+const { isDark } = theme;
+
+
  let [users, setUsers] = useState <User[]>([])
 let [userId, setUserId] = useState <number | null>(null)
 const [userData, setUserData] = useState <User | null>(null)
@@ -75,7 +83,7 @@ navigate("/dashboard/Adduser")
   
   return (
   <>
-  <div className='bguser'>
+ <div className={isDark ? 'bg-dark text-white' : 'bguser'}>
     <div className=''>
   <div className=' user-header sticky-top d-flex justify-content-between align-items-center p-2 px-3 z-3'>
     <h3>Users List</h3>
@@ -84,7 +92,7 @@ navigate("/dashboard/Adduser")
   </div>
  
   <hr />
-   <Table  borderless hover responsive  >
+   <Table  borderless hover responsive   className={isDark ? 'table-dark' : ''} >
       <thead>
 
         <tr>
