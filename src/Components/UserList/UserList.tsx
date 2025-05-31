@@ -77,11 +77,12 @@ navigate("/dashboard/Adduser")
   <>
   <div className='bguser'>
     <div className=''>
-  <div className='d-flex  justify-content-between mx-2 p-2  '>
+  <div className=' user-header sticky-top d-flex justify-content-between align-items-center p-2 px-3 z-3'>
     <h3>Users List</h3>
     <button className='btn btn-warning text-white adduserbtn' onClick={moveToAddUser}>ADD NEW User</button>
   </div>
   </div>
+ 
   <hr />
    <Table  borderless hover responsive  >
       <thead>
