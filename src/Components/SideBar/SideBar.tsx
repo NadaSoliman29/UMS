@@ -12,12 +12,12 @@ import { ThemeContext } from "../context/ThemeContext";
 
 export default function SideBar() {
 
-const theme = useContext(ThemeContext);
-if (!theme) throw new Error("ThemeContext is not provided");
-const { isDark, toggleTheme } = theme;
 
-
-
+    
+  // dark mode 
+  const theme = useContext(ThemeContext);
+  if (!theme) throw new Error("ThemeContext not provided");
+  const { isDark } = theme;
 
   let {userData}:any=useContext(AuthContext)
  let [collapsed, setCollapsed] = useState(window.innerWidth < 667);
@@ -72,9 +72,7 @@ const { isDark, toggleTheme } = theme;
           <MenuItem className="logoutstyle" icon={<MdOutlineLogout />} component={<Link to=" " />}>
             Logout
           </MenuItem>
-            <MenuItem onClick={toggleTheme} icon={<i className="fa-solid fa-moon"></i>}>
-                  {isDark ? "Light Mode" : "Dark Mode"}
-          </MenuItem>
+        
         </Menu>
       
       </Sidebar>
