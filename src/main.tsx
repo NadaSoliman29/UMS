@@ -7,8 +7,10 @@ import './index.css'
 import App from './App.tsx'
 import AuthContextProvider from './Components/context/AuthContext.tsx'
 import ThemeProvider from './Components/context/ThemeContext.tsx'
+import { SearchProvider } from './Components/context/SearchContext.tsx'
 
 createRoot(document.getElementById('root')!).render(
+    <SearchProvider>
 <ThemeProvider>
     <AuthContextProvider>
       <StrictMode>
@@ -16,4 +18,5 @@ createRoot(document.getElementById('root')!).render(
       </StrictMode>
     </AuthContextProvider>
   </ThemeProvider>
+  </SearchProvider>
 )

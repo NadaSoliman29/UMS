@@ -2,7 +2,7 @@ import axios from 'axios'
 import Table from 'react-bootstrap/Table';
 import  { useEffect, useState } from 'react'
 import { MdOutlineModeEdit } from 'react-icons/md';
-
+import { useSearch } from "../context/SearchContext";
 import { SlTrash } from 'react-icons/sl';
 import { Button, Modal } from 'react-bootstrap';
 import { toast } from 'react-toastify';
@@ -26,9 +26,15 @@ export default function UserList() {
 const theme = useContext(ThemeContext);
 if (!theme) throw new Error("ThemeContext not provided");
 const { isDark } = theme;
-
-
+const { searchTerm } = useSearch();
  let [users, setUsers] = useState <User[]>([])
+const filteredUsers = users.filter((user) =>
+  user.firstName.toLowerCase().includes(searchTerm) 
+  // user.lastName.toLowerCase().includes(searchTerm) ||
+  // user.email.toLowerCase().includes(searchTerm)
+);
+
+
 let [userId, setUserId] = useState <number | null>(null)
 const [userData, setUserData] = useState <User | null>(null)
  let navigate = useNavigate()
@@ -109,7 +115,7 @@ navigate("/dashboard/Adduser")
         </tr>
       </thead>
       <tbody>
-       {users.map((user)=>(
+       {filteredUsers.map((user)=>(
         
         <tr key={user?.id} className="bg-light rounded-3 shadow-sm">
         
